@@ -16,7 +16,7 @@ Fixed::Fixed(const int nbr) : _point(nbr << _bits)
     //std::cout << "Int constructor called" << std::endl;
 }
 
-Fixed::Fixed(const float nbr) : _point(std::roundf(nbr * (1 << _bits)))
+Fixed::Fixed(const float nbr) : _point(roundf(nbr * (1 << _bits)))
 {
     //std::cout << "Float constructor called" << std::endl;
 }

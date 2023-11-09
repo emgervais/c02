@@ -37,17 +37,3 @@ bool Point::operator==(const Point& rhs) const {
     return 1;
 }
 
-Fixed dist(Point a, Point b)
-{
-    Fixed r = ((b.getx() - a.getx()) * (b.getx() - a.getx()) + (b.gety() - a.gety()) * (b.gety() - a.gety()));
-    return Fixed(sqrt(r.toFloat()));
-}
-bool check(Point p, Point a, Point b)
-{
-    if(dist(a, b) == dist(p, a) + dist(p, b))
-        return 1;
-    return 0;
-}
-
-    //if(check(point, a, b) || check(point, a, c) || check(point, b, c))
-    //    return 1;
